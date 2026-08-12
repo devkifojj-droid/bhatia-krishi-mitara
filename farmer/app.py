@@ -3,7 +3,7 @@ import google.generativeai as genai
 from PIL import Image
 
 # Yahan apni Google Gemini API Key dalein
-genai.configure(GEMINI_API_KEY)
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Gemini 1.5 Flash model select karein (jo image aur text dono samajhta hai)
 model = genai.GenerativeModel('gemini-3.5-flash')
